@@ -1,0 +1,212 @@
+* {
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #D95550;
+}
+.wrapper {
+    width: max-content;
+    margin: 0 auto;
+}
+.header {
+    width: 100%;
+    text-align: center;
+
+}
+.header__title {
+    font-size: 5vh;
+    margin-bottom: 0;
+    color: #FFF;
+}
+.header__subtitle {
+    font-size: 2vh;
+    color: #FFF;
+}
+.wiki_link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.wiki_link:hover {
+    text-decoration: underline;
+    color: #00FDDC;
+}
+
+
+
+/* Круг таймера */
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.base-timer {
+    position: relative;
+    height: 22vh;
+    width: 22vh;
+}
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+.base-timer__path-elapsed {
+    stroke-width: 6px;
+    stroke: #FFF;
+}
+.base-timer__label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5.5vh;
+    color: #FFF;
+}
+.timer__button {
+    background: rgba(255, 255, 255, .7);
+    border: none;
+    border-radius: 25px;
+    padding: 5px 30px;
+    margin-top: 2vh;
+    font-size: 2vh;
+    color: black;
+    cursor: pointer;
+    margin-right: 2vh;
+}
+.timer__button:last-child {
+    margin-right: 0;
+}
+.timer__button:hover {
+    background: rgba(255, 255, 255, 1);
+}
+.base-timer__path-remaining {
+    stroke-width: 6px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    stroke: currentColor;
+}
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+.base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+    color: orange;
+}
+
+.base-timer__path-remaining.red {
+    color: red;
+}
+
+/* Настройка времени */
+.timer__adjust {
+    width: 100%;
+    text-align: center;
+}
+.timer__adjust-text {
+    color: white;
+    font-size: 3vh;
+    font-weight: bold;
+}
+.timer__adjust-input {
+    width: 100px;
+    min-width: 100px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .5);
+    font-size: 2vh;
+    padding: 10px 20px;
+    text-align: center;
+}
+.timer__adjust-input:focus {
+    background: white;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* Todo */
+.todo {
+    margin-top: 3vh;
+}
+.todo__header {
+    text-align: center;
+    color: white;
+    font-size: 3vh;
+}
+.todo__input {
+    color: black;
+    width: 80%;
+    border-radius: 15px 0 0 15px;
+    padding: 15px 30px;
+    font-size: 2vh;
+    border: 2px solid black;
+    border-right: 0;
+}
+.todo__button {
+    width: 20%;
+    padding: 15px 0;
+    font-size: 2vh;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+    border: 2px solid black;
+    border-left: 0
+}
+.todo__form {
+    width: 100%;
+    margin-bottom: 2vh;
+}
+.todo__item:first-child {
+    margin-top: 0;
+}
+.todo__item {
+    margin-top: 2vh;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 2vh;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.todo__item.complete {
+    text-decoration: line-through;
+    background: rgba(255, 255, 255, .6);
+}
+.todo__item > * {
+    color: black;
+}
+.todo__item__text {
+    width: 100%;
+}
+.edit-icon:hover, .delete-icon:hover {
+    opacity: .6;
+    cursor: pointer;
+}
+.icons {
+    width: calc(20% - 30px);
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    font-size: 2.7vh;
+}
